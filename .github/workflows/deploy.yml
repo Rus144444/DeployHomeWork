@@ -1,0 +1,21 @@
+name: HomeWork Deploy
+
+on: 
+  push: 
+    bannches: [main]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps: 
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        wiht: 
+          node-version: 20
+      - run: npm install
+      - run: npm run build 
+      - uses: actions/upload-pages-artifact@v3
+        wiht:
+          path: dist
+      - uses: actions/deploy-page@v4
