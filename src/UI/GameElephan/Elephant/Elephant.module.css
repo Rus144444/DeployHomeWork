@@ -1,0 +1,8 @@
+.title {
+    margin: 10px
+}
+
+.elephant {
+    font-size: var(--elephant-weight);
+    margin: 10px;
+}
